@@ -97,6 +97,7 @@ def generate_batch_EB(distance):
     return batch, labels
 
 
+# Source: https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/udacity/5_word2vec.ipynb
 graph = tf.Graph()
 
 with graph.as_default():
