@@ -71,6 +71,7 @@ def generate_batch():
 
 
 # Source: https://github.com/aymericdamien/TensorFlow-Examples/blob/master/examples/2_BasicModels/logistic_regression.py
+
 X = tf.placeholder(dtype=tf.float32, shape=[None, num_input])
 Y = tf.placeholder(dtype=tf.float32, shape=[None, num_output])
 
@@ -86,7 +87,6 @@ biases = {
     'out': tf.Variable(tf.random_normal([num_output]))
 }
 
-
 # Create model
 def neural_net(x):
     # Hidden fully connected layer
@@ -97,13 +97,13 @@ def neural_net(x):
     out_layer = tf.matmul(layer_2, weights['out']) + biases['out']
     return out_layer
 
-
 # Construct model
 logits = neural_net(X)
 prediction = tf.nn.softmax(logits)
 
-loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(
-    logits=logits, labels=Y))
+
+
+loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=Y))
 optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(loss)
 
 correct_pred = tf.equal(tf.argmax(prediction, 1), tf.argmax(Y, 1))
