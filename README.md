@@ -1,6 +1,6 @@
 # Deep Learning using TensorFlow, with low-level, mid-level, and high level implementations
 
-*Neural Machine Translation:
+*Neural Machine Translation - Seq2Seq model using Bi-directional Recurrent Neural Network and Attention Mechanism:
 https://github.com/tmtran11/Deep_Learning_TensorFlow/blob/master/NMT/NMT.py
 - Follow instruction from TensorFlow's tutorial, https://www.tensorflow.org/tutorials/seq2seq
 
